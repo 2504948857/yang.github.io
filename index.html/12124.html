@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>公司名字 - 首页</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+  <style>
+    .img-rounded {
+      -webkit-mask-image: radial-gradient(circle, white 100%, rgb(175, 176, 233) 100%);
+      mask-image: radial-gradient(circle, white 100%, rgb(205, 199, 234) 100%);
+    }
+
+    /* 导航栏固定在顶部 */
+    .fixed-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+      color: #CBD5E0;
+    }
+
+    /* 媒体查询 */
+    @media (min-width: 768px) {
+      .responsive-text {
+        font-size: 75px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .navbar-title {
+        font-size: 1rem;
+        display: none;
+      }
+    }
+
+    /* 滚动时导航栏变化 */
+    .scrolled {
+      background-color: rgba(113, 62, 180, 0.17);
+    }
+
+    /* 表单提交成功动画 */
+    .success-message {
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="bg-gray-900 text-white fixed-nav" id="navbar">
+    <div class="container mx-auto flex justify-between px-4 py-2">
+      <div class="flex items-center">
+        <!-- 公司logo -->
+        <img src="images/A.jpg" alt="公司logo" class="w-24 h-auto logo">
+        <h1 class="text-xl ml-4 font-semibold navbar-title">yang</h1>
+      </div>
+      <ul class="flex items-center">
+        <li class="mr-6"><a href="#home" class="nav-link hover:text-gray-400">首页</a></li>
+        <li class="mr-6"><a href="#services" class="nav-link hover:text-gray-400">服务</a></li>
+        <li class="mr-6"><a href="#team" class="nav-link hover:text-gray-400">团队</a></li>
+        <li class="mr-6"><a href="#contact" class="nav-link hover:text-gray-400">联系我们</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 使内容不被固定导航栏遮挡 -->
+
+  <!-- 公司愿景 -->
+  <div class="header flex flex-col items-center justify-center relative">
+    <p class="responsive-text text-base md:text-xl mb-2 font-bold absolute text-white top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1 whitespace-nowrap">
+    </p>
+    <img src="images/3.jpg" alt="公司愿景" class="w-full filter brightness-30" style="user-select: none;">
+  </div>
+
+  <!-- 公司简介 -->
+  <section class="bg-gray-100">
+    <div class="pt-16" id="home"></div>
+    <div class="container mx-auto px-4 py-8">
+      <h2 class="text-3xl font-semibold mb-8 text-center">公司简介</h2>
+      <div class="md:flex mb-6 items-center">
+
+        <img src="images/2.jpg" alt="公司照片" class="md:w-1/2 md:pr-8 mb-4">
+        <div class="md:w-1/2 leading-loose text-gray-600">
+          <p>这里是哈哈公司，我们专注于提供优质的服务，为客户创造最大的价值。我们有一支优秀的团队，能够为您提供最专业的解决方案。如有需要，请随时联系我们。</p>
+          <h3 class="text-xl font-semibold mt-4">我们的使命</h3>
+          <p>我们的使命是成为行业领导者，通过创新和卓越服务，为客户提供最佳体验。</p>
+          <h3 class="text-xl font-semibold mt-4">我们的愿景</h3>
+          <p>我们的愿景是成为全球最受尊敬的企业之一，以卓越的品质、创新和客户满意度获得市场认可。</p>
+        </div>
+      </div>
+      <h3 class="text-xl font-semibold mb-4">我们的核心价值观</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white rounded-md p-4">
+          <h4 class="font-semibold mb-2">客户至上</h4>
+          <p>我们始终以客户需求为导向，全心全意为客户创造价值。</p>
+        </div>
+        <div class="bg-white rounded-md p-4">
+          <h4 class="font-semibold mb-2">创新驱动</h4>
+          <p>我们致力于探索前沿技术，以不断优化产品和服务，为客户提供持续的竞争优势。</p>
+        </div>
+        <div class="bg-white rounded-md p-4">
+          <h4 class="font-semibold mb-2">团队精神</h4>
+          <p>我们重视团队合作，相互支持，共同发展，为实现公司愿景共同努力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 提供的服务 -->
+  <section class="bg-white" id="services">
+    <div class="pt-16" id="services"></div>
+    <div class="container
+    mx-auto px-4 py-8 max-w-screen-xl">
+    <h2 class="text-2xl font-semibold mb-4">提供的服务</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <li class="bg-gray-200 py-4 px-6 rounded-lg">
+        <img src="images/R.jpg" alt="" class="mb-8">
+        <h3 class="text-lg font-medium mb-2">服务1</h3>
+        <p class="text-gray-600">这里是服务1的介绍，介绍服务的特点和优势等等。</p>
+      </li>
+      <li class="bg-gray-200 py-4 px-6 rounded-lg">
+        <img src="images/R.jpg" alt="" class="mb-8">
+        <h3 class="text-lg font-medium mb-2">服务2</h3>
+        <p class="text-gray-600">这里是服务2的介绍，介绍服务的特点和优势等等。</p>
+      </li>
+      <li class="bg-gray-200 py-4 px-6 rounded-lg">
+        <img src="images/R.jpg" alt="" class="mb-8">
+        <h3 class="text-lg font-medium mb-2">服务3</h3>
+        <p class="text-gray-600">这里是服务3的介绍，介绍服务的特点和优势等等。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 团队介绍 -->
+<section class="bg-gray-100">
+  <div class="pt-16" id="team"></div>
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-semibold mb-8 text-center">团队介绍</h2>
+    <div class="md:flex mb-6 items-center">
+      <img src="images/A.jpg" alt="团队照片" class="md:w-1/2 md:pr-8 mb-4">
+      <div class="md:w-1/2 leading-loose text-gray-600">
+        <p>我们的团队由一群专业人士组成，他们在各自的领域拥有丰富的经验和卓越的技能。我们致力于通过团队合作，实现公司的愿景和使命。</p>
+        <h3 class="text-xl font-semibold mt-4">团队合作</h3>
+        <p>我们相信团队合作的力量，通过紧密协作和互相支持，能够更好地应对挑战，实现共同的目标。</p>
+        <h3 class="text-xl font-semibold mt-4">专业素养</h3>
+        <p>我们的团队成员具备高水平的专业知识和技能，能够为客户提供最优质的服务和解决方案。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系我们 -->
+<section class="bg-white" id="contact">
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold mb-4">联系我们</h2>
+    <div class="md:flex mb-6 items-center">
+      <div class="md:w-1/2 leading-loose text-gray-600">
+        <p>如果您对我们的服务有任何疑问或意见，欢迎联系我们，或者填写下面的表单，留下您的信息，我们会尽快与您联系。</p>
+        <form>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="name">姓名</label>
+            <input class="appearance-none border border-gray-400 rounded-lg py-2 px-4 w-full" id="name" type="text"
+              placeholder="请输入您的姓名">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="email">邮箱</label>
+            <input class="appearance-none border border-gray-400 rounded-lg py-2 px-4 w-full" id="email" type="email"
+              placeholder="请输入您的邮箱">
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2" for="message">留言</label>
+            <textarea class="appearance-none border border-gray-400 rounded-lg py-4 px-4 w-full" id="message"
+              placeholder="请输入留言内容"></textarea>
+          </div>
+          <div class="mb-4">
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600" type="submit">提交</button>
+          </div>
+        </form>
+        <div id="success-message" class="hidden success-message">提交成功！我们会尽快与您联系。</div>
+      </div>
+      <div class="md:w-2/3 md:pl-8 mb-4">
+        <img src="images/4.jpg" alt="联系我们" class="w-full h-auto">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 社媒平台 -->
+<section class="bg-white">
+  <div class="container mx-auto px-2 py-4">
+    <h2 class="text-2xl font-semibold mb-2">社媒平台</h2>
+    <div class="flex flex-wrap items-center justify-center">
+      <a href="https://weibo.com">
+        <img src="images/wb.jpg" alt="微博" class="w-10 h-10 mr-4 mb-4">
+      </a>
+      <a href="https://www.douyin.com/">
+        <img src="images/dy.jpg" alt="抖音" class="w-10 h-10 mr-4 mb-4">
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 版权声明 -->
+<section class="bg-gray-900 text-white">
+  <div class="container mx-auto px-2 py-2">
+    <p class="text-gray-600 mb-1 sm:mb-0">© 2024 哈哈公司. All rights reserved.</p>
+  </div>
+</section>
+</body>
+
+</html>
